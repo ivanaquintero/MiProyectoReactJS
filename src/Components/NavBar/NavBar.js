@@ -6,7 +6,9 @@ import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
-import Divider from '@material-ui/core/Divider';
+import './Navbar.css';
+import CartWidget from '../CartWidget/CartWidget';
+
 
 
 
@@ -28,15 +30,16 @@ export default function DenseAppBar() {
         <Toolbar variant="dense">
         <Typography variant="h6" color="inherit">
             Global Deportes
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-          <MenuList>
-                    <MenuItem>Lista 1</MenuItem>
-                    <MenuItem>Lista 2</MenuItem>
-                    <MenuItem>Lista 3</MenuItem>
+          <IconButton  edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+          <MenuList className="centrar">
+                    <MenuItem className="listado">Lista 1</MenuItem>
+                    <MenuItem className="listado">Lista 2</MenuItem>
+                    <MenuItem className="listado">Lista 3</MenuItem>
           </MenuList>    
           </IconButton>
           </Typography>
         </Toolbar>
+        <CartWidget />
       </AppBar>
     </div>
   );
